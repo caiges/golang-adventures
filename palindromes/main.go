@@ -8,8 +8,13 @@ import (
 func palindrome(source string) bool {
 	middle := len(source) / 2
 
-	for i := 0; i <= middle; i++ {
-		if source[i] != source[len(source)-i-1] {
+	for i := 0; i < middle; i++ {
+		start := i
+		end := len(source) - i
+		if start == end {
+			break
+		}
+		if source[start] != source[end] {
 			return false
 		}
 	}
