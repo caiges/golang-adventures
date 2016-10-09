@@ -10,7 +10,7 @@ func palindrome(source string) bool {
 
 	for i := 0; i < middle; i++ {
 		start := i
-		end := len(source) - i
+		end := len(source) - 1 - i
 		if start == end {
 			break
 		}
