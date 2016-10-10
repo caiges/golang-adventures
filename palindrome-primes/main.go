@@ -42,7 +42,7 @@ func (it *SizeIterator) Next() bool {
 
 // IsPrime returns true if the candidate integer is prime, false otherwise
 func IsPrime(candidate int) bool {
-	for i := candidate - 1; i > 1; i-- {
+	for i := 2; i <= candidate/2; i++ {
 		if candidate%i == 0 {
 			return false
 		}
