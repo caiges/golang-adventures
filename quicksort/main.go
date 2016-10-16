@@ -22,6 +22,10 @@ func partition(s []int, begin, end int) int {
 			right--
 		}
 		swap(s, left, right)
+
+		if s[left] == s[right] {
+			left++
+		}
 	}
 	return right
 }
@@ -37,7 +41,7 @@ func sort(s []int, begin, end int) {
 }
 
 func main() {
-	unorderedList := []int{901, 73, 278, 24, 12, 35, 23, 235, 25, 134, 123, 52, 634, 6723, 2, 82, 937, 903, 17, 10}
+	unorderedList := []int{901, 73, 73, 278, 24, 12, 35, 23, 235, 25, 134, 123, 52, 634, 6723, 2, 82, 937, 903, 17, 10}
 
 	fmt.Printf("Sort the following: \n%v\n", unorderedList)
 
